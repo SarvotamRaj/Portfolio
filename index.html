@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sarvotam Raj Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h2>Sarvotam Raj</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section id="home" class="home">
+<h1>Hello, I'm Sarvotam Raj</h1>
+<p>Final Year B.Tech CSE Student | MERN Stack Enthusiast</p>
+
+<a href="Sarvotam Resume upd.pdf" download>
+<button class="btn">Download Resume</button>
+</a>
+</section>
+
+<section id="about" class="about">
+<h2>About Me</h2>
+<p>
+Highly motivated Computer Science Engineering final year student with strong
+foundation in Data Structures and Software Development.
+Skilled in Java, MongoDB and SQL with experience in Web Development
+and Database Management.
+</p>
+</section>
+
+<section id="skills" class="skills">
+<h2>Skills</h2>
+<ul>
+<li>Java</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React</li>
+<li>Node.js</li>
+<li>MongoDB</li>
+<li>MySQL</li>
+<li>Spring Boot</li>
+</ul>
+</section>
+
+<section id="projects" class="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Developed using HTML, CSS and JavaScript</p>
+</div>
+
+<div class="card">
+<h3>Security System using ESP32 Cam</h3>
+<p>Real-time surveillance system with motion detection</p>
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Me</h2>
+
+<div class="contact-box">
+
+<p>Email: 01sarvotamraj@gmail.com</p>
+<p>Phone: +91 7782874023</p>
+
+<input type="text" placeholder="Your Name" id="name"><br><br>
+<input type="email" placeholder="Your Email" id="mail"><br><br>
+<textarea placeholder="Your Message" id="msg"></textarea><br><br>
+
+<button onclick="sendMsg()">Send Message</button>
+<button onclick="github()">GitHub Profile</button>
+
+</div>
+</section>
+
+<button onclick="email()">Email</button>
+<button onclick="phone()">Call</button>
+<button onclick="github()">GitHub</button>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
