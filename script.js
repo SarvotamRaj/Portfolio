@@ -1,4 +1,4 @@
-
+// ===== Theme toggle (remembers choice, falls back to system setting) =====
 const root = document.documentElement;
 const themeBtn = document.getElementById("theme-toggle");
 
@@ -23,7 +23,7 @@ themeBtn.addEventListener("click", () => {
   try { localStorage.setItem("theme", next); } catch { /* storage unavailable */ }
 });
 
-
+// ===== Mobile menu =====
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 
@@ -42,13 +42,13 @@ document.addEventListener("click", e => {
 });
 window.addEventListener("resize", () => { if (window.innerWidth > 820) setMenu(false); });
 
-
+// ===== Navbar border on scroll =====
 const navbar = document.getElementById("navbar");
 const onScroll = () => navbar.classList.toggle("scrolled", window.scrollY > 8);
 onScroll();
 window.addEventListener("scroll", onScroll, { passive: true });
 
-
+// ===== Highlight the nav link for the section in view =====
 const links = [...navLinks.querySelectorAll("a")];
 const sections = links
   .map(a => document.querySelector(a.getAttribute("href")))
@@ -65,7 +65,7 @@ if ("IntersectionObserver" in window) {
   sections.forEach(s => observer.observe(s));
 }
 
-
+// ===== Contact form: validates, then opens the visitor's email app =====
 const form = document.getElementById("contact-form");
 const statusEl = document.getElementById("form-status");
 
@@ -98,5 +98,5 @@ form.addEventListener("submit", e => {
   form.reset();
 });
 
-
+// ===== Footer year =====
 document.getElementById("year").textContent = new Date().getFullYear();
